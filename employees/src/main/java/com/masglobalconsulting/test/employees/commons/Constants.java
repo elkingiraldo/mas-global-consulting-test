@@ -22,5 +22,10 @@ public class Constants {
 	 * Hourly Contract Name for employee
 	 */
 	public static final String HOURLY_CONTRACT_NAME = "HourlySalaryEmployee";
+	
+	/**
+	 * Locale Header Name
+	 */
+	public static final String LOCALE_HEADER_NAME = "locale";
 
 }

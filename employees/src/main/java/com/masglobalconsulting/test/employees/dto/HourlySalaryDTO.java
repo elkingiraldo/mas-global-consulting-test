@@ -34,12 +34,14 @@ public class HourlySalaryDTO extends EmployeeDTO {
 		this.anualSalary = employeeAnualSalary;
 	}
 
-	public double getMonthlySalary() {
+	public double getHourlySalary() {
 		return hourlySalary;
 	}
 
-	public void setMonthlySalary(double hourlySalary) {
+	public void setHourlySalary(double hourlySalary) {
 		this.hourlySalary = hourlySalary;
 	}
+	
+	
 
 }

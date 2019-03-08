@@ -12,7 +12,7 @@ public enum EmployeeServiceErrorCodes implements IEmployeeServiceErrorMsg {
 	
 	GENERAL_EXCEPTION("general.exception", HttpStatus.INTERNAL_SERVER_ERROR),
 	FAIL_TO_RETRIEVE_EMPLOYEES("employee.repository.fail.to.retrieve.employee.exception", HttpStatus.INTERNAL_SERVER_ERROR),
-	EMPLOYEE_NOT_FOUND("employee.service.employee.not.found", HttpStatus.NOT_FOUND);
+	EMPLOYEE_NOT_FOUND("employee.service.employee.not.found.exception", HttpStatus.NOT_FOUND);
 	
 	private String message;
 	private HttpStatus httpStatus;

@@ -2,6 +2,8 @@ package com.masglobalconsulting.test.employees.controller;
 
 import java.util.List;
 
+import javax.websocket.server.PathParam;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +26,7 @@ public class EmployeeController {
 		return employeeService.getAllEmployees();
 	}
 
-	@GetMapping("/id")
+	@GetMapping("/{id}")
 	public EmployeeDTO getById(@PathVariable int id) throws EmployeeServiceException {
 		return employeeService.getEmployeeById(id);
 	}

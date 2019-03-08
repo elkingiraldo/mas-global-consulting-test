@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 
 import com.google.gson.Gson;
 import com.masglobalconsulting.test.employees.commons.Constants;
@@ -23,6 +24,7 @@ import com.masglobalconsulting.test.employees.exception.EmployeeServiceException
  * @author elkin.giraldo
  *
  */
+@Component
 public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
 	public List<EmployeeEntity> retrieveAllEmployees() throws EmployeeServiceException {
