@@ -25,7 +25,7 @@ import com.masglobalconsulting.test.employees.exception.EmployeeServiceException
  */
 public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
-	public List<EmployeeEntity> retrieveInformation() throws EmployeeServiceException {
+	public List<EmployeeEntity> retrieveAllEmployees() throws EmployeeServiceException {
 		List<EmployeeEntity> employeeList = new ArrayList<EmployeeEntity>();
 		try {
 			URL url = new URL(Constants.MAS_URL);
@@ -49,6 +49,16 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 			throw new EmployeeServiceException(EmployeeServiceErrorCodes.FAIL_TO_RETRIEVE_EMPLOYEES);
 		}
 		return employeeList;
+	}
+
+	public EmployeeEntity findEmployeeById(int id) throws EmployeeServiceException {
+		List<EmployeeEntity> employeeList = retrieveAllEmployees();
+		for (int i = 0; i < employeeList.size(); i++) {
+			if (employeeList.get(i).getId() == id) {
+				return employeeList.get(i);
+			}
+		}
+		return null;
 	}
 
 	private List<EmployeeEntity> takeInformationFromJson(String output) {

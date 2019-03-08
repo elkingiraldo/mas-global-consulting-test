@@ -10,12 +10,12 @@ import com.masglobalconsulting.test.employees.service.salary.SalaryFactory;
  * @author elkin.giraldo
  *
  */
-public class MontlySalaryDTO extends EmployeeDTO {
+public class MonthlySalaryDTO extends EmployeeDTO {
 
 	private double monthlySalary;
 	private double anualSalary;
 
-	public MontlySalaryDTO(int id, String name, String contractTypeName, int roleId, String roleName,
+	public MonthlySalaryDTO(int id, String name, String contractTypeName, int roleId, String roleName,
 			String roleDescription, double monthlySalary) {
 		super(id, name, contractTypeName, roleId, roleName, roleDescription);
 		this.monthlySalary = monthlySalary;
